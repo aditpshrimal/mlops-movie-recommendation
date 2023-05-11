@@ -1,0 +1,20 @@
+name: Check for data file
+
+on: [push]
+
+jobs:
+  check-data-file:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check for data file
+      run: |
+        if [ -f data/Movies_and_TV.csv ]; then
+            echo "Data file exists."
+            exit 0
+        else
+            echo "Data file does not exist."
+            exit 1
+        fi
