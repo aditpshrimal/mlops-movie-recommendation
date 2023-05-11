@@ -1,0 +1,7 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/ashrimal2/movie-recommendation.dvc
+    auth = basic
+    user = ashrimal2
+    password = 926e6fd62da4fdb8ffd45706dd6e11321a08a8ee

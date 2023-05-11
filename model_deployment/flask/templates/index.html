@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <h1>Login</h1>
+  <form action="/recommendations" method="post">
+    <div class="form-group">
+      <label for="user_id">User ID</label>
+      <input type="text" class="form-control" id="user_id" name="user_id" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}

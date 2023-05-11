@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendations{% endblock %}
+
+{% block content %}
+  <h1>Recommendations</h1>
+  <div class="container">
+    <div class="row flex-nowrap overflow-auto">
+      {% for recommendation in recommendations %}
+        <div class="col-4">
+          <div class="card mb-4">
+            <img src="{{ recommendation.url or 'https://via.placeholder.com/350x500' }}" class="card-img-top" alt="{{ recommendation.title }}" style="width: 350px; height: 500px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">{{ recommendation.title }}</h5>
+              <a href="/product_detail/{{ recommendation.asin }}" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Product Detail{% endblock %}
+
+{% block content %}
+  <h1>{{ product.title }}</h1>
+  <img src="{{ product.url or 'https://via.placeholder.com/350x500' }}" alt="{{ product.title }}" class="img-fluid mb-4" style="width: 350px; height: 500px; object-fit: cover;">
+
+  <h2>Similar Items</h2>
+  <div class="container">
+    <div class="row flex-nowrap overflow-auto">
+      {% for item in similar_items %}
+        <div class="col-4">
+          <div class="card mb-4">
+            <img src="{{ item.url or 'https://via.placeholder.com/350x500' }}" class="card-img-top" alt="{{ item.title }}" style="width: 350px; height: 500px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

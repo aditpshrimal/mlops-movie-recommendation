@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    {% for result in results %}
+        <div>
+            <h3>{{ result.title }}</h3>
+            <p>ASIN: {{ result.asin }}</p>
+        </div>
+    {% endfor %}
+
+    <a href="/">Go back to the main page</a>
+</body>
+</html>

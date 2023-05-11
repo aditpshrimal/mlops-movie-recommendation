@@ -1,0 +1,12 @@
+/* custom.css */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .card {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
